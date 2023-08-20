@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>BMI Calculator</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./output/app.js" defer></script>
+  </head>
+  <body>
+    <div class="flex">
+      <h1 class="bmi__title">BMI Calculator</h1>
+    </div>
+    <div class="bmi__container">
+      <!-- age -->
+      <div>
+        <h4 class="bmi__subtitle">Age</h4>
+        <input
+          id="bmi__age"
+          class="input-style"
+          type="number"
+          min="2"
+          max="100"
+          placeholder="Type age (24)"
+        />
+      </div>
+      <!-- weight -->
+      <div>
+        <h4 class="bmi__subtitle">Weight(KG)</h4>
+        <input
+          id="bmi__weight"
+          class="input-style"
+          type="number"
+          min="5"
+          max="500"
+          placeholder="Type weight (70)"
+        />
+      </div>
+
+      <!-- height -->
+      <div>
+        <h4 class="bmi__subtitle">Weight</h4>
+        <div class="flex gap">
+          <select class="input-style" id="bmi__feet">
+            <option readonly disabled selected hidden>Choose (feet)</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <select class="input-style" id="bmi__inch">
+            <option readonly disabled selected hidden>Choose (inches)</option>
+            <option value="1">1'</option>
+            <option value="2">2'</option>
+            <option value="3">3'</option>
+            <option value="4">4'</option>
+            <option value="5">5'</option>
+            <option value="6">6'</option>
+            <option value="7">7'</option>
+            <option value="8">8'</option>
+            <option value="9">9'</option>
+            <option value="10">10'</option>
+            <option value="11">11'</option>
+            <option value="12">12'</option>
+          </select>
+        </div>
+      </div>
+      <button class="bmi__btn">Calculate</button>
+    </div>
+
+    <div class="bmi__meter__container">
+      <div class="bmi__display">
+        <h2>BMI</h2>
+        <h3 id="bmi__output">0.0</h3>
+      </div>
+      <div class="bmi__status">
+        <div class="bmi__blue">Underweight</div>
+        <div class="bmi__green">Normal</div>
+        <div class="bmi__orange">Overweight</div>
+        <div class="bmi__red">Obese</div>
+      </div>
+      <div class="bmi__pointer">
+        <span class="hand-pointer">👆</span>
+      </div>
+    </div>
+  </body>
+</html>

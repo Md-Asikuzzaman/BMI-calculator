@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap');
+
+:root {
+  --base-color: #24174a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+body {
+  background-color: var(--base-color);
+  padding: 0 1rem;
+}
+/* universal classes */
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gap {
+  gap: 1rem;
+}
+
+.input-style {
+  width: 100%;
+  outline: none;
+  outline-width: 0;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: var(--base-color);
+  margin-bottom: 0.5rem;
+}
+
+/* main section styles */
+
+.bmi__container {
+  max-width: 30rem;
+  width: 100%;
+  margin: 0 auto;
+  /* background: linear-gradient(45deg, #EC4899, #A855F7, #6366F1); */
+  background: linear-gradient(45deg, #ec489a59, #a955f754, #6365f14e);
+  margin-top: 2.5rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.bmi__title {
+  font-size: 1.4rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  padding: 10px 40px;
+  border-radius: 9999px;
+  margin-top: 20px;
+}
+
+.bmi__subtitle {
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+}
+
+.bmi__btn {
+  background: linear-gradient(45deg, #ec4899, #a855f7, #6366f1);
+  width: 100%;
+  outline: none;
+  outline-width: 0;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  margin-top: 1rem;
+}
+
+/* meter */
+.bmi__meter__container {
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+  /* background-color: #fff; */
+}
+
+.bmi__display {
+  margin-top: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.bmi__status {
+  display: flex;
+  /* gap: .1rem; */
+}
+
+.bmi__blue {
+  width: 100%;
+  background-color: dodgerblue;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.bmi__green {
+  width: 100%;
+  background-color: green;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.bmi__orange {
+  width: 100%;
+  background-color: orange;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.bmi__red {
+  width: 100%;
+  background-color: crimson;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+/* pointer */
+.bmi__pointer {
+  position: relative;
+  background-color: red;
+  width: 100%;
+}
+
+.hand-pointer {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  font-size: 2rem;
+  transition: 600ms ease-in-out;
+}
+
+.under-weight {
+  left: calc(12.5% - 20px);
+}
+
+.normal {
+  left: calc(37.5% - 20px);
+}
+
+.over-weight {
+  left: calc(62.5% - 20px);
+}
+
+.obese {
+  left: calc(87.5% - 20px);
+}
